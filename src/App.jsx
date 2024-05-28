@@ -1,9 +1,8 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Navbar/Hero/Hero";
-import Categories from "./components/Navbar/Categories/Categories";
-
-
+import Hero from "./components/About/Hero/Hero";
+import Categories from "./components/Categories/Categories";
+import About from "./components/About/About";
 
 const App = () => {
   return (
@@ -12,6 +11,7 @@ const App = () => {
         <Navbar />
         <Hero />
         <Categories />
+        <About />
       </div>
     </>
   );
