@@ -1,3 +1,6 @@
+# ABOUT
+SereneBooks is a one-stop place for people who love books or are curious enough to explore the literary world. This website aims to create a vibrant online community for those who enjoy reading. Different genres of books are shared and discovered through this platform, making readers' minds more creative.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
