@@ -4,7 +4,6 @@ import Hero from "./components/About/Hero/Hero";
 import Categories from "./components/Navbar/Categories/Categories";
 import About from "./components/About/About";
 import Blog from "./components/Blog/Blog";
-import Addpage from "./components/Addpage";
 import ContactUs from "./components/ContactUs/ContactUs";
 import BookListModal from "./components/BookListModal";
 
@@ -27,7 +26,6 @@ const App = () => {
         <Categories onCategoryClick={handleCategoryClick} />
         <About />
         <Blog />
-        <Addpage />
         <ContactUs />
         {selectedCategory && (
           <BookListModal
