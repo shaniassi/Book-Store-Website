@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Blog from "./components/Blog/Blog";
 import ContactUs from "./components/ContactUs/ContactUs";
 import BookListModal from "./components/BookListModal";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -27,6 +28,7 @@ const App = () => {
         <About />
         <Blog />
         <ContactUs />
+        <Footer />
         {selectedCategory && (
           <BookListModal
             category={selectedCategory}
