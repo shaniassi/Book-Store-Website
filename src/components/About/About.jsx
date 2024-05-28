@@ -20,7 +20,7 @@ const About = () => {
           magna fringilla urna. Sit amet consectetur adipiscing elit ut aliquam.
         </p>
       </div>
-      <div className="absolute w-[200px] h-[45px] left-[680px] top-[2140px] bg-red rounded-[20px]">
+      <div className="absolute w-[200px] h-[45px] left-[680px] top-[2150px] bg-red rounded-[20px]">
         <div
           className="absolute w-[160px] h-[31px] left-[45px] top-[3px] font-bold text-[23px] leading-[39px] text-white hover:underline"
           style={{ fontFamily: "Inika" }}
