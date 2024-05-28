@@ -36,7 +36,7 @@ const booksByCategory = {
     { title: "The Secret Library", imageUrl: book8 },
     { title: "The Curious Why", imageUrl: book9 }
   ],
-  "Crime & Mystery": [
+  Mystery: [
     { title: "Gone Girl", imageUrl: book10 },
     { title: "Bluebird, Bluebird", imageUrl: book11 },
     { title: "Murder on the Orient Express", imageUrl: book12 }
