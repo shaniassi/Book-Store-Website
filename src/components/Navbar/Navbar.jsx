@@ -1,74 +1,180 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/logo.png";
 
 const PromoHeader = () => {
+  const [visibleDropdown, setVisibleDropdown] = useState(null);
+  let hoverTimeout;
+
+  const handleMouseEnter = (menu) => {
+    clearTimeout(hoverTimeout);
+    setVisibleDropdown(menu);
+  };
+
+  const handleMouseLeave = () => {
+    hoverTimeout = setTimeout(() => {
+      setVisibleDropdown(null);
+    }, 300); // Delay of 300ms before hiding the dropdown
+  };
+
   return (
     <>
       <div className="bg-customBackground h-screen">
-        <div className="w-[1440] h-[105px] left-[0px] top-0 bg-white border-black">
-          <a href="#" className="absolute w-[110px] left-[18px] top-[0px]">
-            <img src={Logo} alt="Logo" />
-            <div
-              className="absolute w-[300px] left-[115px] top-[20px]"
-              style={{ fontFamily: "Inika" }}
-            >
-              <h1 className="font-bold text-[35px] leading-[65px] text-brown" >SereneBooks</h1>
+        <div className="w-full h-[105px] bg-white border-b border-black flex items-center relative">
+          <a href="#" className="flex items-center ml-4">
+            <img src={Logo} alt="Logo" className="w-[110px]" />
+            <div className="ml-4" style={{ fontFamily: "Inika" }}>
+              <h1 className="font-bold text-[35px] leading-[65px] text-brown">SereneBooks</h1>
             </div>
           </a>
-        </div>
-        <div>
-          <ul>
-            <li>
+          <ul className="flex space-x-8 absolute right-10">
+            <li className="relative" onMouseEnter={() => handleMouseEnter("home")} onMouseLeave={handleMouseLeave}>
               <a
                 href="#"
-                className="absolute w-[98px] h-[31px] left-[680px] top-[35px] font-bold text-[25px] leading-[33px] text-red hover:underline"
+                className="font-bold text-[25px] leading-[33px] text-red hover:underline"
                 style={{ fontFamily: "Inika" }}
               >
                 Home
               </a>
+              {/* Home dropdown content if needed */}
             </li>
-            <li>
+            <li className="relative" onMouseEnter={() => handleMouseEnter("categories")} onMouseLeave={handleMouseLeave}>
               <a
                 href="#"
-                className="absolute w-[98px] h-[31px] left-[820px] top-[35px] font-bold text-[25px] leading-[33px] text-red hover:underline"
+                className="font-bold text-[25px] leading-[33px] text-red hover:underline"
                 style={{ fontFamily: "Inika" }}
               >
                 Categories
               </a>
+              <ul
+                className={`absolute bg-white border border-gray-200 mt-2 left-0 top-full w-72 p-4 grid grid-cols-2 gap-2 transition-opacity duration-300 ${
+                  visibleDropdown === "categories" ? "opacity-100 visible" : "opacity-0 invisible"
+                }`}
+              >
+                <li>
+                  <a href="#" className="block text-gray-700 hover:underline hover:font-bold">
+                    Fiction
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block text-gray-700 hover:underline hover:font-bold">
+                    Non-Fiction
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block text-gray-700 hover:underline hover:font-bold">
+                    Children
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block text-gray-700 hover:underline hover:font-bold">
+                    Mystery
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block text-gray-700 hover:underline hover:font-bold">
+                    Horror
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block text-gray-700 hover:underline hover:font-bold">
+                    Romance
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li>
+            <li className="relative" onMouseEnter={() => handleMouseEnter("blog")} onMouseLeave={handleMouseLeave}>
               <a
                 href="#"
-                className="absolute w-[98px] h-[31px] left-[1010px] top-[35px] font-bold text-[25px] leading-[33px] text-red hover:underline"
+                className="font-bold text-[25px] leading-[33px] text-red hover:underline"
                 style={{ fontFamily: "Inika" }}
               >
                 Blog
               </a>
+              <ul
+                className={`absolute bg-white border border-gray-200 mt-2 left-0 top-full transition-opacity duration-300 ${
+                  visibleDropdown === "blog" ? "opacity-100 visible" : "opacity-0 invisible"
+                }`}
+              >
+                <li>
+                  <a href="#" className="block px-4 py-2 text-gray-700 hover:underline hover:font-bold">
+                    Latest Posts
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 text-gray-700 hover:underline hover:font-bold">
+                    Popular Posts
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 text-gray-700 hover:underline hover:font-bold">
+                    Archives
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li>
+            <li className="relative" onMouseEnter={() => handleMouseEnter("about")} onMouseLeave={handleMouseLeave}>
               <a
                 href="#"
-                className="absolute w-[98px] h-[31px] left-[1140px] top-[35px] font-bold text-[25px] leading-[33px] text-red hover:underline"
+                className="font-bold text-[25px] leading-[33px] text-red hover:underline"
                 style={{ fontFamily: "Inika" }}
               >
                 About
               </a>
+              <ul
+                className={`absolute bg-white border border-gray-200 mt-2 left-0 top-full transition-opacity duration-300 ${
+                  visibleDropdown === "about" ? "opacity-100 visible" : "opacity-0 invisible"
+                }`}
+              >
+                <li>
+                  <a href="#" className="block px-4 py-2 text-gray-700 hover:underline hover:font-bold">
+                    Our Story
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 text-gray-700 hover:underline hover:font-bold">
+                    Team
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 text-gray-700 hover:underline hover:font-bold">
+                    Careers
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li>
+            <li className="relative" onMouseEnter={() => handleMouseEnter("contact")} onMouseLeave={handleMouseLeave}>
               <a
                 href="#"
-                className="absolute w-[150px] h-[31px] left-[1275px] top-[35px] font-bold text-[25px] leading-[33px] text-red hover:underline"
+                className="font-bold text-[25px] leading-[33px] text-red hover:underline"
                 style={{ fontFamily: "Inika" }}
               >
                 Contact Us
               </a>
+              <ul
+                className={`absolute bg-white border border-gray-200 mt-2 left-0 top-full transition-opacity duration-300 ${
+                  visibleDropdown === "contact" ? "opacity-100 visible" : "opacity-0 invisible"
+                }`}
+              >
+                <li>
+                  <a href="#" className="block px-4 py-2 text-gray-700 hover:underline hover:font-bold">
+                    Customer Service
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 text-gray-700 hover:underline hover:font-bold">
+                    Support
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 text-gray-700 hover:underline hover:font-bold">
+                    Feedback
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
-        <div
-          className="absolute w-[1440px] h-0 left-[0px] top-[105px] border border-black"
-          style={{ transform: "rotate(180deg)" }}
-        ></div>
+        <div className="w-full border-t border-black"></div>
       </div>
     </>
   );
