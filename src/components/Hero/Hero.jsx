@@ -33,9 +33,9 @@ const Hero = () => {
           style={{ fontFamily: "Inika" }}
         >
           <p className="text-[20px] leading-[26px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet
-            dictum sit amet justo donec enim diam.
+            SereneBooks invites you to discover tranquility through the art of
+            reading. Immerse yourself in a carefully curated collection of books
+            that inspire peace, mindfulness, and inner calm.
           </p>
         </div>
       </a>
