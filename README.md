@@ -5,17 +5,25 @@ SereneBooks is a one-stop place for people who love books or are curious enough 
 
 
 ## Features
-- **Book Listings:** Browse a list of books with cover images.
-- **Responsive Design:** Enjoy a seamless experience on both desktops and mobile devices thanks to a responsive web design.
 - **Navigation Bar:** A comprehensive navigation system including links to main sections.
+  ![image](https://github.com/shaniassi/WebDev-Asgn1/assets/164065005/4d4d6529-8f17-4000-b41a-067bfc613093)
 - **Categories Selector:** Allows users to browse books by categories.
-- **About Section:** Provides information about SereneBooks and its objectives.
+  ![image](https://github.com/shaniassi/WebDev-Asgn1/assets/164065005/77f5e4ec-88d5-434c-85f9-04f8fc9e3db5)
+- **Book Listings:** Browse a list of books with cover images.
+  ![image](https://github.com/shaniassi/WebDev-Asgn1/assets/164065005/71e582e3-b706-4994-bb8b-428e081085d1)
+- **About Section:** Provides information about SereneBooks and the team.
+  ![image](https://github.com/shaniassi/WebDev-Asgn1/assets/164065005/b7d424c2-41b1-451b-a295-9c195350ba64)
 - **Blog:** Regular updates and articles related to books and reading.
+  ![image](https://github.com/shaniassi/WebDev-Asgn1/assets/164065005/d56eb4a7-2146-4ef2-8a0d-ff6443513a2c)
 - **Contact Us:** A section for users to reach out with inquiries or feedback.
-- **Footer:** Contains links and additional information about SereneBooks.
+  ![image](https://github.com/shaniassi/WebDev-Asgn1/assets/164065005/a580ec6a-d15d-4444-a249-457074750a85)
+- **Footer:** Contains links and contact information about SereneBooks.
+  ![image](https://github.com/shaniassi/WebDev-Asgn1/assets/164065005/28cf2dd6-4f73-4e8e-bde7-e6867562fe37)
+
 
 ## Built With
 - **React + Vite:** Utilizes React for efficient frontend rendering and Vite for enhanced development experience.
+- **HTML:** Structured with HTML to define the content and layout of the web pages.
 - **Tailwind CSS:** Styled using Tailwind CSS for sleek, responsive designs.
 - **ESLint:** Maintains code quality with ESLint.
 - **Vite Plugins:** Incorporates @vitejs/plugin-react for fast refresh capabilities.
