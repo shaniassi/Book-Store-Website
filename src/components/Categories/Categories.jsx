@@ -1,10 +1,10 @@
 import React from "react";
-import fictionImg from "../../../assets/images/fiction.jpg";
-import nonFictionImg from "../../../assets/images/non-fiction.jpg";
-import childrenImg from "../../../assets/images/children.jpg";
-import mysteryImg from "../../../assets/images/mystery.jpg";
-import horrorImg from "../../../assets/images/horror.jpg";
-import romanceImg from "../../../assets/images/romance.jpg";
+import fictionImg from "../../assets/images/fiction.jpg";
+import nonFictionImg from "../../assets/images/non-fiction.jpg";
+import childrenImg from "../../assets/images/children.jpg";
+import mysteryImg from "../../assets/images/mystery.jpg";
+import horrorImg from "../../assets/images/horror.jpg";
+import romanceImg from "../../assets/images/romance.jpg";
 
 const categories = [
   {
